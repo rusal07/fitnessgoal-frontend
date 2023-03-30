@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import dontworryimg from './img/dontworry.png'
 import Header from '../Header/Header'
-
+import { Link } from 'react-router-dom'
 function Home() {
   useEffect(()=>{
     document.title = "FitnessGoal"
@@ -9,6 +9,7 @@ function Home() {
   return (
     <>
     <Header />
+ 
     <div>
          <main style={{display: "flex",  alignItems:"center", flexDirection: "column", width: "100%"}}>
                 {/* <div>
@@ -33,13 +34,18 @@ function Home() {
                     <div>
                         <h6 style={{marginTop: "-50px"}} >Login or Register Here.</h6>
                    <div>
-                        <a style={{margin: "0px 10px"}} href="/login"><button  className="btn btn-primary">Login</button></a>
-                        <a style={{margin: "0px 10px"}} href="/register"><button  className="btn btn-primary">Register</button></a>
+                   <Link to="/login">
+                        <button  style={{margin: "0px 10px"}} className="btn btn-primary">Login</button>
+                        </Link>
+                      <Link to="/register">
+                        <button  style={{margin: "0px 10px"}} className="btn btn-primary">Register</button>
+                        </Link>
                     </div>
                     </div> 
                     <h6>Your healthy routine is in the safe hands.</h6>       
             </main>
     </div>
+
     </>
   )
 }
