@@ -95,7 +95,7 @@ function BmiCalc(props) {
   const authenticatedUser = props.data;
   
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/targetuser/${authenticatedUser.id}`)
+    axios.get(`https://fitnessgoalbackend.onrender.com/api/targetuser/${authenticatedUser.id}`)
     .then(function (response) {
       if(response.data === null){
         setisAlreadySet(false)
