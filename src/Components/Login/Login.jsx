@@ -26,7 +26,7 @@ function Login() {
   const [userData, setUserData] = useState({});
   //
   const loginNow = () => {
-    axios.get(`http://localhost:8000/api/loginuser/${loginData.email.toLowerCase()}/${loginData.password}`)
+    axios.get(`https://fitnessgoalbackend.onrender.com/api/loginuser/${loginData.email.toLowerCase()}/${loginData.password}`)
     .then((response)=>{
         setUserData(response.data)
         const loginEmail = loginData.email.toLowerCase()
