@@ -1,0 +1,213 @@
+.container-calculator {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+    border: 1px solid orange;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px purple inset;
+  }
+  
+  .calculator-box form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .calculator-box .form-field {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+  }
+  
+  .calculator-box label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 15px;
+  }
+  
+  .calculator-box input,
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+  
+  .calculator-box span {
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  
+  .calculator-box button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .calculator-box button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .result {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .calculator-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .calculator-box p {
+    font-size: 1.2rem;
+  }
+  
+
+  
+  .Target-header h1 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .Target-header button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .Target-header button:hover {
+    text-decoration: underline;
+  }
+  
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    color: whitesmoke !important;
+    background-color: rgba(16, 38, 55, 0.5) !important;
+    border: 2px solid orange !important;
+    border-radius: 15px !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: #aaa;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #333;
+  }
+  
+  .modal-content h2 {
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+  }
+  
+  .modal-content label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .modal-content input,
+  .modal-content select {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  .modal-content button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    background-color: #070907 !important;
+  }
+  .modal-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    background-color: #333 !important;
+  }
+  
+  .modal-content .form-field {
+    margin: 1rem 0;
+  }
+  
+  .modal-content label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .modal-content input,
+  .modal-content select {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-top: 0.5rem;
+  }
+.modal-btn:hover{
+  background-color: rgb(67, 72, 77);
+}
+  
+  .modal-content .form-message {
+    font-size: 1.2rem;
+    color: red;
+    margin-top: 0.5rem;
+  }
+
+  .ReactModal__Content{
+    display: flex;
+    opacity: 0.9;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./img/setyourgoal.png") !important;
+  }
+  
+  .displaynot{
+    display: none;
+  }

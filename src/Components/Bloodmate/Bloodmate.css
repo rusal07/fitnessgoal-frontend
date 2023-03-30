@@ -1,0 +1,23 @@
+.clickhere:hover{
+    box-shadow: 3px 3px 5px rgb(141, 5, 5);
+    cursor: pointer;
+    transform: scale(1.05)
+}
+.bloodlist-main{
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 9px inset #D9664A;
+}
+.hidebloodlist{
+    display: none;
+}
+.Bloodmate-List{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.blood-card{
+    margin: 10px;
+}

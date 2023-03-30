@@ -1,0 +1,15 @@
+.form-group input[type="text"]{
+    width: 400px;
+}
+.form-group input[type="email"]{
+    width: 400px;
+}
+.form-group textarea{
+    width: 400px;
+}
+.form-body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,11 @@
+.Header{
+    border-bottom:4px solid #ffffff;
+    background-color: rgb(1,18,51);
+    color: whitesmoke;
+}
+.Header a{
+    color: whitesmoke;
+}
+nav a{
+    margin: 0px 10px;
+}
