@@ -23,7 +23,7 @@ const Bloodmate = () => {
      const loggedInUser = localStorage.getItem("authenticated");
      if (loggedInUser) {
          setauthenticated(loggedInUser);
-         axios.get(`http://localhost:8000/api/bloodmates/${authenticatedUser.id}`)
+         axios.get(`https://fitnessgoalbackend.onrender.com/api/bloodmates/${authenticatedUser.id}`)
          .then(response=>{
             setBloodmateData(response.data)
          })
