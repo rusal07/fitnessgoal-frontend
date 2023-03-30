@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import logo from "./img/brandlogo.png";
 import "./Header.css";
+import { Link } from 'react-router-dom';
 const Header = () => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
 
@@ -18,10 +19,18 @@ const Header = () => {
         </button>
   
         <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}>
-          <a className="btn btn-outline-secondary" href="/">HOME</a>
-          <a href="/login" className="btn btn-outline-secondary" >LOGIN</a>
-          <a href="/register" className="btn btn-outline-secondary" >REGISTER</a>
-          <a href="/contact" className="btn btn-outline-secondary" >CONTACT</a>
+        <Link to="/home">
+          <button style={{color: "whitesmoke"}} className="btn btn-outline-secondary">Home</button>
+          </Link>
+          <Link to="/login">
+          <button style={{color: "whitesmoke"}}  className="btn btn-outline-secondary">Login</button>
+          </Link>
+          <Link to="/register">
+          <button style={{color: "whitesmoke"}}  className="btn btn-outline-secondary">Register</button>
+          </Link>
+          <Link to="/contact">
+          <button style={{color: "whitesmoke"}}  className="btn btn-outline-secondary">Contact</button>
+          </Link>
         </div>
         </div>
       </nav>
