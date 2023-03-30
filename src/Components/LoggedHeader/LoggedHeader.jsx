@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import logo from "./img/brandlogo.png";
 import "./Header.css";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 const LoggedHeader = () => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     const navigate = useNavigate();
@@ -28,7 +28,9 @@ const LoggedHeader = () => {
   </button>
 
   <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`}>
-	<a className="btn btn-outline-secondary" href="/home">HOME</a>
+  <Link to="/home">
+	<button style={{color: "whitesmoke"}} className="btn btn-outline-secondary">HOME</button>
+  </Link>
 	<button className="btn btn-outline-secondary" style={{color: "whitesmoke", margin: "0px 15px"}} onClick={Bloodmate} >BLOODMATE</button>
   </div>
   </div>
