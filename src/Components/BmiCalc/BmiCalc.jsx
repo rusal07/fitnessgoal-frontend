@@ -204,7 +204,7 @@ function BmiCalc(props) {
       <div className="container-calculator">
         <h4>BMI Calculator</h4>
         
-        <form className='calculator-box' onSubmit={(e) => CalculateBMIFunc(e)}>
+        <form className='calculator-box' onSubmit={(e) => CalculateBMIFunc(e)} style={{display: "flex", flexDirection: "column" }}>
           <div className="form-field">
             <label htmlFor="age">Age:</label>
             <input
@@ -232,7 +232,7 @@ function BmiCalc(props) {
             <label htmlFor="height-feet">Height:</label>
             {unitSystem === "imperial" ? (
               <>
-                <input
+                <input style={{width: "130px"}}
                   type="number"
                   id="height-feet"
                   name="height-feet"
@@ -241,7 +241,7 @@ function BmiCalc(props) {
                   required
                 />
                 <span>ft</span>
-                <input
+                <input style={{width: "130px"}}
                   type="number"
                   id="height-inches"
                   name="height-inches"
