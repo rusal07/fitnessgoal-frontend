@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7f8d9ba8.css",
+    "main.js": "/static/js/main.00ac775b.js",
+    "static/media/registerimg.gif": "/static/media/registerimg.14b66b5212ec4ec377d5.gif",
+    "static/media/loginimg.gif": "/static/media/loginimg.a803acb926f3655ce0cb.gif",
+    "static/media/contactus.gif": "/static/media/contactus.3f7ea21d0f5c1a45e8b6.gif",
+    "static/media/setyourgoal.png": "/static/media/setyourgoal.c29cbcf77383a87fa128.png",
+    "static/media/blood-img.gif": "/static/media/blood-img.1491878d5db0a98eba1a.gif",
+    "static/media/we-can-help.png": "/static/media/we-can-help.c5072c0f88e49e8852d2.png",
+    "static/media/dontworry.png": "/static/media/dontworry.5c460fa67209f52c48f7.png",
+    "static/media/list-of-people.png": "/static/media/list-of-people.afd7437e27256e552c68.png",
+    "static/media/brandlogo.png": "/static/media/brandlogo.8aded01a77338370eb57.png",
+    "static/media/clickhere.png": "/static/media/clickhere.5df232b61e9e297057d4.png",
+    "index.html": "/index.html",
+    "main.7f8d9ba8.css.map": "/static/css/main.7f8d9ba8.css.map",
+    "main.00ac775b.js.map": "/static/js/main.00ac775b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f8d9ba8.css",
+    "static/js/main.00ac775b.js"
+  ]
+}
