@@ -21,7 +21,7 @@ export const Contactform = () => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
       };
       const send = () => {
-        window.Email.smtpjs.send({
+        window.Email.send({
             SecureToken: "9360d3bd-8a0c-4041-8891-00d2b97e0297", //smtpjs dot com
             To: "officialph03n1xw0lf@gmail.com", //which email to send?
             From: "rusaltamang07@gmail.com",  //By which email?
