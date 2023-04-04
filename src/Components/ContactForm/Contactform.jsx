@@ -23,7 +23,7 @@ export const Contactform = () => {
       const send = () => {
         window.Email.send({
             SecureToken: "9360d3bd-8a0c-4041-8891-00d2b97e0297", //smtpjs dot com
-            To: "officialph03n1xw0lf@gmail.com", //which email to send?
+            To: "rusalenoch17@gmail.com", //which email to send?
             From: "rusaltamang07@gmail.com",  //By which email?
             Subject: `Email: ${formData.email}`,
             Body: `Subject: ${formData.subject} & 
