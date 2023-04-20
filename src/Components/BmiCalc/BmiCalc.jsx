@@ -171,7 +171,7 @@ function BmiCalc(props) {
       "targetTimeFrame": targetTimeframe
     }
     //Handling with DB:
-    axios.post('http://127.0.0.1:8000/api/targetgoals', userInfo)
+    axios.post('https://fitnessgoalbackend.onrender.com/api/targetgoals', userInfo)
     .then(function (response) {
     })
     .catch(function (error) {
