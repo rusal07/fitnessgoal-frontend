@@ -60,7 +60,7 @@ function Register() {
           is_active : true,
           blood_group: formData.blood_group
         }
-        axios.post("https://fitnessgoalbackend.onrender.com/api/registeraccount", userinfo)
+        axios.post("http://18.216.31.30/api/registeraccount", userinfo)
         .then(response=>{
           toast.success('User registered successfully.', {
             position: "top-center",
