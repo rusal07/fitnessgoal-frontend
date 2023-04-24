@@ -95,7 +95,7 @@ function BmiCalc(props) {
   const authenticatedUser = props.data;
   
   useEffect(() => {
-    axios.get(`http://18.216.31.30/api/targetuser/${authenticatedUser.id}`)
+    axios.get(`https://fitnessgoal.ngrok.io/api/targetuser/${authenticatedUser.id}`)
     .then(function (response) {
       if(response.data === null){
         setisAlreadySet(false)
@@ -171,7 +171,7 @@ function BmiCalc(props) {
       "targetTimeFrame": targetTimeframe
     }
     //Handling with DB:
-    axios.post('http://18.216.31.30/api/targetgoals', userInfo)
+    axios.post('https://fitnessgoal.ngrok.io/api/targetgoals', userInfo)
     .then(function (response) {
     })
     .catch(function (error) {
