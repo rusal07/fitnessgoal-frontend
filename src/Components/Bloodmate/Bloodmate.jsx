@@ -23,7 +23,7 @@ const Bloodmate = () => {
      const loggedInUser = localStorage.getItem("authenticated");
      if (loggedInUser) {
          setauthenticated(loggedInUser);
-         axios.get(`http://18.216.31.30/api/bloodmates/${authenticatedUser.id}`)
+         axios.get(`https://fitnessgoal.ngrok.io/api/bloodmates/${authenticatedUser.id}`)
          .then(response=>{
             setBloodmateData(response.data)
          })
