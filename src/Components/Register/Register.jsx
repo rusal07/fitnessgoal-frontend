@@ -60,7 +60,7 @@ function Register() {
           is_active : true,
           blood_group: formData.blood_group
         }
-        axios.post("https://6704-3-12-127-89.ngrok-free.app/api/registeraccount", userinfo)
+        axios.post("https://fitnessgoal.ngrok.io/api/registeraccount", userinfo)
         .then(response=>{
           toast.success('User registered successfully.', {
             position: "top-center",
