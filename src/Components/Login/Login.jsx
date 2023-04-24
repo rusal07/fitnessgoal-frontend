@@ -27,7 +27,7 @@ function Login() {
   const [userData, setUserData] = useState({});
   //
   const loginNow = () => {
-    axios.get(`https://6704-3-12-127-89.ngrok-free.app/api/loginuser/${loginData.email.toLowerCase()}/${loginData.password}`)
+    axios.get(`https://fitnessgoal.ngrok.io/api/loginuser/${loginData.email.toLowerCase()}/${loginData.password}`)
     .then((response)=>{
         setUserData(response.data)
         const loginEmail = loginData.email.toLowerCase()
