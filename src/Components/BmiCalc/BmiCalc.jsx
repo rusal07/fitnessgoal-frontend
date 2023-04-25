@@ -28,6 +28,9 @@ function BmiCalc(props) {
   const [category, setCategory] = useState("");
   const [unitSystem, setUnitSystem] = useState("imperial");
   const [userData, setUserData] = useState({});
+  const [suggestion, setSuggestion] = useState(false);
+  const [showMessage, setshowMessage ] = useState("");
+
 
   const calculateBMI = () => {
     let weightInKilograms;
@@ -59,7 +62,96 @@ function BmiCalc(props) {
     // Set state variables for BMI value and category
     setBMI(bmiValue.toFixed(2));
     setCategory(bmiCategory);
+    setSuggestion(true);
+    messageSet(bmiCategory);
   };
+
+  let messageSet = bmiCategory => {
+    let message;
+    if (bmiCategory === "Underweight"){
+      message = <ol><li>Eat more calories: To gain weight, you need to consume more calories than your body burns.
+      Aim to eat 500-1,000 more calories than your daily maintenance level.</li> <li>Focus on nutrient-dense foods: Choose foods that are high in nutrients such as protein, healthy
+      fats, and complex carbohydrates. Examples include nuts, seeds, whole grains, lean meats, fish,
+      and vegetables.</li><li>Eat frequently: Try to eat at least three meals per day and include snacks in between. This will
+      help you consume more calories throughout the day.</li><li>Strength train: Resistance training can help build muscle mass and promote weight gain. Focus
+      on compound exercises such as squats, deadlifts, and bench presses.</li><li>Get enough sleep: Aim for 7-8 hours of sleep per night to promote muscle recovery and growth.</li>
+    <li>Seek medical advice: If you are struggling to gain weight or have any concerns about your
+      health, speak to a healthcare professional. They can provide personalized advice and support.</li><p className='last-text'>Remember, gaining weight in a healthy way takes time and consistency. It&#39;s important to be patient with
+      the process and focus on making sustainable lifestyle changes that promote overall health and well-
+      being.</p></ol>
+
+    }else if (bmiCategory === "Normal weight"){
+      message = <ol>
+                <li>Stay active: Aim to engage in regular physical activity such as walking, jogging, cycling, or weight
+lifting. Physical activity not only helps maintain your weight but also improves your
+cardiovascular health, strengthens your bones and muscles, and reduces stress.</li>
+                <li>Eat a balanced diet: Focus on consuming a variety of nutrient-dense foods such as fruits,
+vegetables, whole grains, lean proteins, and healthy fats. Avoid processed foods, sugary drinks,
+and snacks that are high in calories but low in nutrients.</li>
+                <li>Get enough sleep: Aim for 7-8 hours of sleep per night to help regulate your appetite, energy
+levels, and overall health.</li>
+<li>Manage stress: Chronic stress can lead to overeating, weight gain, and other health problems.
+Practice stress management techniques such as meditation, deep breathing, yoga, or spending
+time in nature.</li>
+<li>Monitor your weight: Keep track of your weight on a regular basis to ensure that you are
+maintaining a healthy BMI. If you notice any significant changes in your weight, speak to a
+healthcare professional.</li>
+<p className='last-text'>Remember, maintaining a healthy weight is a lifelong journey that requires a commitment to healthy
+habits and lifestyle choices. By making small changes to your daily routine, you can continue to improve
+your health and well-being.</p>
+                </ol>
+    
+    
+    }else if(bmiCategory === "Overweight"){
+      message = <ol>
+        <li>Set realistic goals: Aim to lose 1-2 pounds per week. Losing weight too quickly can be unhealthy
+and difficult to maintain.</li>
+        <li>Eat a balanced diet: Focus on consuming a variety of nutrient-dense foods such as fruits,
+vegetables, whole grains, lean proteins, and healthy fats. Avoid processed foods, sugary drinks,
+and snacks that are high in calories but low in nutrients.</li>
+        <li>Control portion sizes: Use a food scale or measuring cups to ensure that you are consuming
+appropriate portions. Be mindful of your hunger and fullness cues, and stop eating when you
+feel full.</li>
+        <li>Engage in regular physical activity: Aim to engage in at least 30 minutes of moderate-intensity
+exercise most days of the week. This can include activities such as brisk walking, jogging, cycling,
+or swimming.</li>
+        <li>Get enough sleep: Aim for 7-8 hours of sleep per night to help regulate your appetite, energy
+levels, and overall health.</li>
+<p className='last-text'>Remember, losing weight in a healthy and sustainable way takes time and consistency. It&#39;s important to
+be patient with the process and focus on making sustainable lifestyle changes that promote overall
+health and well-being. If you have any concerns about your weight or health, speak to a healthcare
+professional.</p>
+      </ol>
+    
+    
+    
+    
+    }else {
+      message = <ol>
+      <li>Set realistic goals: Aim to lose 1-2 pounds per week. Losing weight too quickly can be unhealthy
+and difficult to maintain.</li>
+      <li>Eat a balanced diet: Focus on consuming a variety of nutrient-dense foods such as fruits,
+vegetables, whole grains, lean proteins, and healthy fats. Avoid processed foods, sugary drinks,
+and snacks that are high in calories but low in nutrients.</li>
+      <li>Control portion sizes: Use a food scale or measuring cups to ensure that you are consuming
+appropriate portions. Be mindful of your hunger and fullness cues, and stop eating when you
+feel full.</li>
+      <li>Engage in regular physical activity: Aim to engage in at least 30 minutes of moderate-intensity
+exercise most days of the week. This can include activities such as brisk walking, jogging, cycling,
+or swimming.</li>
+      <li>Get enough sleep: Aim for 7-8 hours of sleep per night to help regulate your appetite, energy
+levels, and overall health.</li>
+<p className='last-text'>Remember, losing weight in a healthy and sustainable way takes time and consistency. It&#39;s important to
+be patient with the process and focus on making sustainable lifestyle changes that promote overall
+health and well-being. If you have any concerns about your weight or health, speak to a healthcare
+professional.</p>
+    </ol>
+    }
+    setshowMessage(message);
+  }
+
+
+
   //Bmi TARGET 
   const openModal = () => {
     setIsModalOpen(true);
@@ -74,18 +166,6 @@ function BmiCalc(props) {
   };
   const handleTargetWeightChange = (event) => {
     setTargetWeight(Number(event.target.value));
-    // const newTargetWeight = Number(event.target.value);
-    // if (
-    //   newTargetWeight < MIN_TARGET_WEIGHT ||
-    //   newTargetWeight > MAX_TARGET_WEIGHT
-    // ) {
-    //   setSaveError(
-    //     `Target weight must be between ${MIN_TARGET_WEIGHT} and ${MAX_TARGET_WEIGHT}`
-    //   );
-    // } else {
-    //   setTargetWeight(newTargetWeight);
-    //   setSaveError(null);
-    // }
   };
   const [checkGoals, setCheckGoals] = useState(false);
   const [checkGoalsWeight, setCheckGoalsWeight] = useState(0);
@@ -162,8 +242,7 @@ function BmiCalc(props) {
   };
 
   const handleSaveButtonClick = () => {
-    // console.log(`Target weight: ${targetWeight} kg`);
-    // console.log(`Target timeframe: ${targetTimeframe}`);
+
     let targetW = parseInt(targetWeight);
     const userInfo = {
       "user_id": authenticatedUser.id,
@@ -321,6 +400,12 @@ function BmiCalc(props) {
         )}
       </div>
       </div>
+      <div className='suggestion-box'>
+      <div className={suggestion? 'display-suggestion' : 'dontdisplay-suggestions' }>
+        <h3>Here, what you can do.</h3>
+        {showMessage}
+      </div>
+      </div>
       {/* BMI TARGET */}
       <img style={{marginTop: "0px"}} src={wecanhelp} height="200px" width="200px"/>
       <p><em>We can help you by letting you set your Weight Target and helping you monitor when you come back to check.</em></p>
@@ -355,7 +440,7 @@ function BmiCalc(props) {
               </span>
               <h2>Set Your Goals</h2>
               <label>
-                Target Weight (kg):
+                Target Weight:
                 <input
                   type="number"
                   id="target-weight"
