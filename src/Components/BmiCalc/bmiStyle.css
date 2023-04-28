@@ -207,7 +207,32 @@
     align-items: center;
     background-image: url("./img/setyourgoal.png") !important;
   }
-  
+
   .displaynot{
     display: none;
+  }
+  .dontdisplay-suggestions{
+     display: none;
+  }
+  .suggestion-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 2px 2px rgb(240, 224, 194);
+    margin-bottom: 10px;
+  }
+  .display-suggestion{
+    flex-direction: column;
+    margin-top: 20px;
+    width: 50%;
+  }
+  .last-text{
+    margin-top: 5px;
+    color: rgb(237, 130, 29);
+  }
+  .display-suggestion li{
+  
+      text-align:left;
+      margin-top: 10px;
+    
   }
